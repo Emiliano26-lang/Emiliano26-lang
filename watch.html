@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Watch - YouTube</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: { red: '#FF0000' }
+            },
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Ubuntu', 'Cantarell', 'Noto Sans', 'Helvetica Neue', 'Arial', 'Apple Color Emoji', 'Segoe UI Emoji']
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-white text-gray-900 font-sans">
+    <!-- Header -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-gray-200">
+      <div class="max-w-[2000px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 gap-3">
+          <div class="flex items-center gap-3">
+            <a href="/index.html" class="flex items-center gap-2">
+              <span class="inline-flex items-center justify-center w-8 h-8 rounded bg-brand-red text-white">
+                <i class="fas fa-play text-sm ml-0.5"></i>
+              </span>
+              <span class="text-xl font-semibold tracking-tight">YouTube</span>
+            </a>
+          </div>
+          <form class="hidden md:flex items-stretch flex-1 max-w-3xl mx-4" action="#" onsubmit="return false;">
+            <input type="text" placeholder="Search" class="flex-1 border border-gray-300 rounded-l-full px-4 focus:outline-none focus:ring-1 focus:ring-brand-red focus:border-brand-red" />
+            <button class="px-5 border border-l-0 border-gray-300 rounded-r-full bg-gray-50 hover:bg-gray-100">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+          <div class="flex items-center gap-3">
+            <button class="p-2 rounded hover:bg-gray-100 hidden md:inline-flex" aria-label="Create">
+              <i class="fas fa-video text-xl"></i>
+            </button>
+            <button class="p-2 rounded hover:bg-gray-100" aria-label="Notifications">
+              <i class="fas fa-bell text-xl"></i>
+            </button>
+            <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-sm font-semibold">Y</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_400px] gap-8">
+        <!-- Player + details -->
+        <section>
+          <div class="aspect-video bg-black rounded-xl overflow-hidden">
+            <video class="w-full h-full" controls poster="https://placehold.co/1280x720/png?text=Video+Poster">
+              <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <h1 class="mt-4 text-xl sm:text-2xl font-semibold leading-snug">The Future of Web Development in 2025: Frameworks, Tooling, and Best Practices</h1>
+
+          <!-- Actions -->
+          <div class="mt-3 flex flex-wrap items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+              <div class="flex items-center gap-3">
+                <img src="https://placehold.co/40x40/png" alt="Channel avatar" class="w-10 h-10 rounded-full" />
+                <div>
+                  <p class="font-medium">Web Dev Channel</p>
+                  <p class="text-xs text-gray-500">1.2M subscribers</p>
+                </div>
+              </div>
+              <button class="px-4 py-2 rounded-full bg-gray-900 text-white text-sm font-medium">Subscribe</button>
+            </div>
+            <div class="flex items-center gap-2">
+              <button class="px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-sm font-medium">
+                <i class="fas fa-thumbs-up mr-2"></i> 15K
+              </button>
+              <button class="px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-sm font-medium">
+                <i class="fas fa-thumbs-down mr-2"></i> 210
+              </button>
+              <button class="px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-sm font-medium">
+                <i class="fas fa-share mr-2"></i> Share
+              </button>
+              <button class="px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 text-sm font-medium">
+                <i class="fas fa-download mr-2"></i> Download
+              </button>
+              <button class="px-3 py-2 rounded-full bg-gray-100 hover:bg-gray-200">
+                <i class="fas fa-ellipsis-h"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Description -->
+          <div class="mt-4 bg-gray-100 rounded-xl p-4">
+            <p class="text-sm text-gray-800"><span class="font-semibold">742,014 views</span> • 2 days ago</p>
+            <p class="mt-2 text-sm leading-relaxed">
+              In this video, we explore the latest trends shaping the web development landscape in 2025, including framework updates, tooling improvements, and best
+              practices to ship high-quality apps faster.
+            </p>
+            <button class="mt-2 text-sm font-medium text-gray-700">Show more</button>
+          </div>
+
+          <!-- Comments (mock) -->
+          <section class="mt-6">
+            <h2 class="text-lg font-semibold">Comments</h2>
+            <div class="mt-3 flex gap-3">
+              <img src="https://placehold.co/40x40/png" class="w-10 h-10 rounded-full" alt="Your avatar" />
+              <input type="text" placeholder="Add a comment..." class="flex-1 border-b border-gray-300 focus:outline-none focus:border-gray-500 px-3 py-2" />
+            </div>
+
+            <div class="mt-6 space-y-6">
+              <div class="flex gap-3">
+                <img src="https://placehold.co/40x40/png" class="w-10 h-10 rounded-full" alt="Avatar" />
+                <div>
+                  <p class="text-sm font-medium">Code Enthusiast</p>
+                  <p class="text-sm text-gray-700">Amazing breakdown. The part about performance budgets was spot on.</p>
+                  <div class="mt-1 flex items-center gap-4 text-xs text-gray-500">
+                    <button class="hover:underline">Like</button>
+                    <button class="hover:underline">Reply</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex gap-3">
+                <img src="https://placehold.co/40x40/png" class="w-10 h-10 rounded-full" alt="Avatar" />
+                <div>
+                  <p class="text-sm font-medium">Frontend Fan</p>
+                  <p class="text-sm text-gray-700">Could you share the slides? Great content!</p>
+                  <div class="mt-1 flex items-center gap-4 text-xs text-gray-500">
+                    <button class="hover:underline">Like</button>
+                    <button class="hover:underline">Reply</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <!-- Related videos -->
+        <aside class="space-y-4">
+          <!-- Single related item -->
+          <a href="/watch.html" class="flex gap-3 group">
+            <div class="relative w-48 shrink-0 aspect-video rounded-lg overflow-hidden bg-gray-200">
+              <img src="https://placehold.co/320x180/png" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform" alt="Thumb" />
+              <span class="absolute bottom-1 right-1 text-[10px] font-semibold bg-black/80 text-white px-1 py-0.5 rounded">12:34</span>
+            </div>
+            <div class="min-w-0">
+              <p class="font-medium leading-snug line-clamp-2">Top 10 Tailwind CSS Tips and Tricks You Should Know</p>
+              <p class="text-xs text-gray-600">CSS Mastery</p>
+              <p class="text-xs text-gray-500">384K views • 1 week ago</p>
+            </div>
+          </a>
+
+          <a href="/watch.html" class="flex gap-3 group">
+            <div class="relative w-48 shrink-0 aspect-video rounded-lg overflow-hidden bg-gray-200">
+              <img src="https://placehold.co/320x180/png" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform" alt="Thumb" />
+              <span class="absolute bottom-1 right-1 text-[10px] font-semibold bg-black/80 text-white px-1 py-0.5 rounded">08:20</span>
+            </div>
+            <div class="min-w-0">
+              <p class="font-medium leading-snug line-clamp-2">Minimalist Desk Setup Tour – Productivity on a Budget</p>
+              <p class="text-xs text-gray-600">Focus Lab</p>
+              <p class="text-xs text-gray-500">96K views • 4 hours ago</p>
+            </div>
+          </a>
+
+          <a href="/watch.html" class="flex gap-3 group">
+            <div class="relative w-48 shrink-0 aspect-video rounded-lg overflow-hidden bg-gray-200">
+              <img src="https://placehold.co/320x180/png" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform" alt="Thumb" />
+              <span class="absolute bottom-1 right-1 text-[10px] font-semibold bg-black/80 text-white px-1 py-0.5 rounded">22:45</span>
+            </div>
+            <div class="min-w-0">
+              <p class="font-medium leading-snug line-clamp-2">Building a Fullstack App with Next.js and Prisma – Complete Guide</p>
+              <p class="text-xs text-gray-600">Dev Journey</p>
+              <p class="text-xs text-gray-500">842K views • 3 weeks ago</p>
+            </div>
+          </a>
+
+          <a href="/watch.html" class="flex gap-3 group">
+            <div class="relative w-48 shrink-0 aspect-video rounded-lg overflow-hidden bg-gray-200">
+              <img src="https://placehold.co/320x180/png" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform" alt="Thumb" />
+              <span class="absolute bottom-1 right-1 text-[10px] font-semibold bg-black/80 text-white px-1 py-0.5 rounded">03:17</span>
+            </div>
+            <div class="min-w-0">
+              <p class="font-medium leading-snug line-clamp-2">React 19 New Features – A Practical Overview</p>
+              <p class="text-xs text-gray-600">React Daily</p>
+              <p class="text-xs text-gray-500">742K views • 2 days ago</p>
+            </div>
+          </a>
+        </aside>
+      </div>
+    </main>
+  </body>
+</html>
